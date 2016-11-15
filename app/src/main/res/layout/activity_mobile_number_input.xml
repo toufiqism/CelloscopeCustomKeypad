@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_color"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/parent_layout_padding"
+        android:paddingRight="@dimen/parent_layout_padding">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/label_layout_row__style"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/arrow_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text=">"
+                    android:textColor="@color/generic_blue" />
+
+                <TextView
+                    style="@style/label_style"
+                    android:layout_width="0px"
+                    android:layout_height="30dp"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="বিল পরিশোধের শেষ তারিখ " />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:gravity="center"
+                    android:text="Date"
+                    android:textColor="@color/white_color"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/txtMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:gravity="center"
+                    android:text="Month"
+                    android:textColor="@color/white_color"
+                    android:textSize="21sp" />
+
+
+                <TextView
+                    android:id="@+id/txtYear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:gravity="center"
+                    android:text="Year"
+                    android:textColor="@color/white_color"
+                    android:textSize="21sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3.5">
+
+                <TextView
+                    android:id="@+id/txtDate_Input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:gravity="center"
+                    android:hint="Date"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/date_text_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="/"
+                    android:textColor="@color/black"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/txtMonth_Input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:gravity="center"
+                    android:hint="Month"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/date_text_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="/"
+                    android:textColor="@color/black"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtYear_Input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="0.6"
+                    android:gravity="center"
+                    android:hint="Year"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/date_text_size" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="AMOUNT"
+
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layoutFragmentContainerInMobileNumberInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/L0"
+                style="@style/keyPad_Month_L0_Layout_Style">
+
+                <LinearLayout
+                    android:id="@+id/L0_1"
+                    style="@style/keypad_Month_Sub_Layout_Style">
+
+                    <LinearLayout
+                        android:id="@+id/L0_1_1"
+                        style="@style/keypad_Month_actionListener_Layout_Style">
+
+                        <TextView
+                            android:id="@+id/txt1"
+                            style="@style/keyPad_Month_TextView_1_style"
+                            android:text="@string/bangla_01" />
+
+                        <TextView
+                            android:id="@+id/txt1_1"
+                            style="@style/keyPad_Month_TextView_2_style"
+                            android:text="@string/bangla_January" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/L0_1_2"
+                        style="@style/keypad_Month_actionListener_Layout_Style">
+
+                        <TextView
+                            android:id="@+id/txt2"
+                            style="@style/keyPad_Month_TextView_1_style"
+                            android:text="@string/bangla_02" />
+
+                        <TextView
+                            android:id="@+id/txt2_1"
+                            style="@style/keyPad_Month_TextView_2_style"
+                            android:text="@string/bangla_February" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/L0_1_3"
+                        style="@style/keypad_Month_actionListener_Layout_Style">
+
+                        <TextView
+                            android:id="@+id/txt3"
+                            style="@style/keyPad_Month_TextView_1_style"
+                            android:text="@string/bangla_03" />
+
+                        <TextView
+                            android:id="@+id/txt3_1"
+                            style="@style/keyPad_Month_TextView_2_style"
+                            android:text="@string/bangla_March" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/L0_2"
+                    style="@style/keypad_Month_Sub_Layout_Style">
+
+                    <LinearLayout
+                        android:id="@+id/L0_2_1"
+                        style="@style/keypad_Month_actionListener_Layout_Style">
+
+                        <TextView
+                            android:id="@+id/txt4"
+                            style="@style/keyPad_Month_TextView_1_style"
+                            android:text="@string/bangla_04" />
+
+                        <TextView
+                            android:id="@+id/txt4_1"
+                            style="@style/keyPad_Month_TextView_2_style"
+                            android:text="@string/bangla_April" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/L0_2_2"
+                        style="@style/keypad_Month_actionListener_Layout_Style">
+
+                        <TextView
+                            android:id="@+id/txt5"
+                            style="@style/keyPad_Month_TextView_1_style"
+                            android:text="@string/bangla_05" />
+
+                        <TextView
+                            android:id="@+id/txt5_1"
+                            style="@style/keyPad_Month_TextView_2_style"
+                            android:layout_width="match_parent"
+                            android:text="@string/bangla_May" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/L0_2_3"
+                        style="@style/keypad_Month_actionListener_Layout_Style">
+
+                        <TextView
+                            android:id="@+id/txt6"
+                            style="@style/keyPad_Month_TextView_1_style"
+                            android:text="@string/bangla_06" />
+
+                        <TextView
+                            android:id="@+id/txt6_1"
+                            style="@style/keyPad_Month_TextView_2_style"
+                            android:text="@string/bangla_June" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/L0_3"
+                    style="@style/keypad_Month_Sub_Layout_Style">
+
+
+                    <LinearLayout
+                        android:id="@+id/L0_3_1"
+                        style="@style/keypad_Month_actionListener_Layout_Style">
+
+                        <TextView
+                            android:id="@+id/txt7"
+                            style="@style/keyPad_Month_TextView_1_style"
+                            android:gravity="bottom|center"
+                            android:text="@string/bangla_07" />
+
+                        <TextView
+                            android:id="@+id/txt7_1"
+                            style="@style/keyPad_Month_TextView_2_style"
+                            android:text="@string/bangla_July" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/L0_3_2"
+                        style="@style/keypad_Month_actionListener_Layout_Style">
+
+                        <TextView
+                            android:id="@+id/txt8"
+                            style="@style/keyPad_Month_TextView_1_style"
+                            android:text="@string/bangla_08" />
+
+                        <TextView
+                            android:id="@+id/txt8_1"
+                            style="@style/keyPad_Month_TextView_2_style"
+                            android:text="@string/bangla_August" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/L0_3_3"
+                        style="@style/keypad_Month_actionListener_Layout_Style">
+
+                        <TextView
+                            android:id="@+id/txt9"
+                            style="@style/keyPad_Month_TextView_1_style"
+                            android:text="@string/bangla_09" />
+
+                        <TextView
+                            android:id="@+id/txt9_1"
+                            style="@style/keyPad_Month_TextView_2_style"
+                            android:text="@string/bangla_September" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/L0_4"
+                    style="@style/keypad_Month_Sub_Layout_Style">
+
+                    <LinearLayout
+                        android:id="@+id/L0_4_1"
+                        style="@style/keypad_Month_actionListener_Layout_Style">
+
+                        <TextView
+                            android:id="@+id/txt10"
+                            style="@style/keyPad_Month_TextView_1_style"
+                            android:text="@string/bangla_10" />
+
+                        <TextView
+                            android:id="@+id/txt10_1"
+                            style="@style/keyPad_Month_TextView_2_style"
+                            android:text="@string/bangla_October" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/L0_4_2"
+                        style="@style/keypad_Month_actionListener_Layout_Style">
+
+                        <TextView
+                            android:id="@+id/txt11"
+                            style="@style/keyPad_Month_TextView_1_style"
+                            android:text="@string/bangla_11" />
+
+                        <TextView
+                            android:id="@+id/txt11_1"
+                            style="@style/keyPad_Month_TextView_2_style"
+                            android:text="@string/bangla_November" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/L0_4_3"
+                        style="@style/keypad_Month_actionListener_Layout_Style">
+
+                        <TextView
+                            android:id="@+id/txt12"
+                            style="@style/keyPad_Month_TextView_1_style"
+                            android:text="@string/bangla_12" />
+
+                        <TextView
+                            android:id="@+id/txt12_1"
+                            style="@style/keyPad_Month_TextView_2_style"
+                            android:text="@string/bangla_December" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layoutFragmentContainerInMobileNumberInput_date"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/Date_L0"
+                style="@style/keyPad_Date_L0_Layout_Style">
+
+
+                <LinearLayout
+                    android:id="@+id/Date_L0_1"
+                    style="@style/keyPad_Date_Sub_Layout_Style">
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_1_1"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_1_2"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_2" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_1_3"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_3" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_1_4"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_4" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_1_5"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_5" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_1_6"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_6" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Date_L0_2"
+                    style="@style/keyPad_Date_Sub_Layout_Style">
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_2_1"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_7" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_2_2"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_8" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_2_3"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_9" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_2_4"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_10" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_2_5"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_11" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_2_6"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_12" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Date_L0_3"
+                    style="@style/keyPad_Date_Sub_Layout_Style">
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_3_1"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_13" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_3_2"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_14" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_3_3"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_15" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_3_4"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_16" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_3_5"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_17" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_3_6"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_18" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Date_L0_4"
+                    style="@style/keyPad_Date_Sub_Layout_Style">
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_4_1"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_19" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_4_2"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_20" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_4_3"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_21" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_4_4"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_22" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_4_5"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_23" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_4_6"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_24" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Date_L0_5"
+                    style="@style/keyPad_Date_Sub_Layout_Style">
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_5_1"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_25" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_5_2"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_26" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_5_3"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_27" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_5_4"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_28" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_5_5"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_29" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_5_6"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_30" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Date_L0_6"
+                    style="@style/keyPad_Date_Sub_Layout_Style">
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_6_1"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+                        <TextView
+                            style="@style/keyPad_Date_TextView_1_style"
+                            android:text="@string/date_bangla_31" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_6_2"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_6_3"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_6_4"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_6_5"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Date_L0_6_6"
+                        style="@style/keyPad_Date_actionListener_Layout_Style">
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutFragmentContainerInMobileNumberInput_numpad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <LinearLayout
+
+                android:id="@+id/Year_L0"
+                style="@style/keyPad_Year_L0_style">
+
+                <LinearLayout
+                    android:id="@+id/Year_L0_1"
+                    style="@style/keyPad_Year_ActionListener_style">
+
+                    <TextView
+                        android:id="@+id/txtYearUpper"
+                        style="@style/keyPad_Year_TextView_style"
+
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Year_L0_2"
+                    style="@style/keyPad_Year_ActionListener_style">
+
+                    <TextView
+                        android:id="@+id/txtYearLower"
+                        style="@style/keyPad_Year_TextView_style"
+
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
+
+
+

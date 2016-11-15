@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light.NoTitleBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- All customizations that are NOT pxecific to a particular API-level can go here. -->
+
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="android:Theme.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <!-- <item name="buttonBarStyle">@style/ButtonBar</item> -->
+        <!-- <item name="buttonBarButtonStyle">@style/ButtonBarButton</item> -->
+    </style>
+
+    <style name="ButtonBar">
+        <item name="android:paddingLeft">2px</item>
+        <item name="android:paddingTop">5px</item>
+        <item name="android:paddingRight">2px</item>
+        <item name="android:paddingBottom">0px</item>
+        <item name="android:background">@android:drawable/bottom_bar</item>
+    </style>
+
+    <style name="ButtonBarButton" />
+
+    <style name="LoginFormContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16px</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:shadowColor">@color/black_overlay
+        </item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:background">@drawable/button_selector</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:textColor">@color/white_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextViewStyle">
+        <item name="android:textSize">14px</item>
+        <item name="android:textColor">@color/white_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/bluish_color</item>
+        <item name="android:padding">5px</item>
+        <item name="android:shadowDx">-2</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="Title1TextViewStyle">
+        <item name="android:textSize">18px</item>
+        <item name="android:textColor">@color/jira_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowColor">@color/black_overlay</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="headerTextViewStyle">
+        <item name="android:textSize">12px</item>
+        <item name="android:textColor">@color/offwhite</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowColor">@color/black_overlay</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="Title2TextViewStyle">
+        <item name="android:textSize">17px</item>
+        <item name="android:textColor">@color/jira_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDx">-2</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="InfoTextViewStyle">
+        <item name="android:textSize">16px</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDx">-2</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="ReviewTextViewStyle">
+        <item name="android:textSize">16px</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDx">-2</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:gravity">center</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="NumberPadRedButtonStyle">
+        <item name="android:textSize">26px</item>
+        <item name="android:textColor">@color/white_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDx">-2</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:background">@drawable/numberpad_button_selector</item>
+    </style>
+
+
+    <style name="NumberPadButtonStyle">
+        <item name="android:textSize">26px</item>
+        <item name="android:textColor">@color/generic_blue</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDx">-2</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:background">@drawable/whitebutton_selector</item>
+    </style>
+
+    <style name="NumberPadWhiteButtonStyle">
+        <item name="android:textSize">26px</item>
+        <item name="android:textColor">@color/white_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDx">-2</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:background">@drawable/whitebutton_selector</item>
+    </style>
+
+    <style name="NumberPadNextButtonStyle">
+        <item name="android:textSize">28px</item>
+        <item name="android:textColor">@color/black</item>
+        <!-- <item name="csb:background">@drawable/numberpad_next_button_selector</item> -->
+        <item name="android:background">@drawable/graybutton_selector</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="NumberPadCancelButtonStyle">
+        <item name="android:textSize">26px</item>
+        <item name="android:textColor">@color/white_color</item>
+        <!-- <item name="csb:background">@drawable/numberpad_cancel_button_selector</item> -->
+        <item name="android:background">@drawable/graybutton_selector</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="NumberPadClearButtonStyle">
+        <item name="android:textSize">15px</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">13px</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="CashDepositDipxlayStyle">
+        <item name="android:textSize">35px</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:background">@drawable/amount_display_backgound</item>
+    </style>
+
+    <style name="CashAmountDipxlayStyle">
+        <item name="android:textSize">35px</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:background">@drawable/amount_display_backgound</item>
+    </style>
+
+    <!-- <style name="AccountNumberDipxlayStyle"> -->
+    <!-- <item name="csb:textSize">20px</item> -->
+    <!-- <item name="csb:textColor">@color/black</item> -->
+    <!-- <item name="csb:textStyle">bold</item> -->
+    <!-- <item name="csb:shadowDx">2</item> -->
+    <!-- <item name="csb:shadowDy">0</item> -->
+    <!-- <item name="csb:shadowRadius">2</item> -->
+    <!-- <item name="csb:background">@drawable/amount_dipxlay_backgound</item> -->
+    <!-- </style> -->
+
+
+    <!-- <style name="LogOutButtonStyle"> -->
+    <!-- <item name="csb:background">@drawable/logout_button_selector</item> -->
+    <!-- <item name="csb:textSize">14px</item> -->
+    <!-- <item name="csb:textColor">@color/white_color</item> -->
+    <!-- <item name="csb:textStyle">bold</item> -->
+    <!-- <item name="csb:shadowDx">2</item> -->
+    <!-- <item name="csb:shadowDy">0</item> -->
+    <!-- <item name="csb:shadowRadius">2</item> -->
+    <!-- <item name="csb:text">@string/btntext_logout_bankmenu</item> -->
+    <!-- </style> -->
+
+    <style name="LogInHeaderTextViewStyle">
+        <item name="android:textSize">@dimen/textsize__label_login</item>
+        <item name="android:textColor">@color/ocean_blue</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">5px</item>
+        <item name="android:shadowDx">-2</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="HeaderTextViewStyle">
+        <item name="android:textColor">@color/ocean_blue</item>
+        <item name="android:padding">5px</item>
+        <item name="android:shadowDx">-2</item>
+        <item name="android:textSize">18px</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="MenuTextViewStyle">
+        <item name="android:textSize">@dimen/textsize__menutext_bankmenu</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowColor">@color/whitesmoke_color</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="BankMenuTextViewStyle">
+        <item name="android:textSize">@dimen/textsize__menutext_bankmenu</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowColor">@color/whitesmoke_color</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="CustomerServicesMenuTextViewStyle">
+        <item name="android:textSize">@dimen/textsize__menutext_bankmenu</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowColor">@color/whitesmoke_color</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="LogOutButtonStyle">
+
+        <!-- <item name="csb:background">@drawable/logout_button_selector</item> -->
+
+        <item name="android:background">@drawable/logout_selector</item>
+        <item name="android:textSize">14px</item>
+        <item name="android:textColor">@color/white_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:width">@dimen/btn_logoutwidth</item>
+        <item name="android:height">@dimen/btn_logoutheight</item>
+        <!-- <item name="csb:text">@string/btntext_logout_bankmenu</item> -->
+    </style>
+
+    <style name="pxinner_style_general">
+        <item name="android:background">@drawable/spinner_bg</item>
+        <item name="android:layout_width">0px</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">@dimen/spinner_height</item>
+
+    </style>
+
+    <style name="CustomerNameTextViewStyle">
+        <item name="android:textSize">18px</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">5px</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="AmountInWordsTextViewStyle">
+        <item name="android:textSize">18px</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/bluish_color</item>
+        <item name="android:padding">5px</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="AmountTextViewStyle">
+        <item name="android:textSize">18px</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/bluish_color</item>
+        <item name="android:padding">5px</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="pxinner_style">
+        <item name="android:background">@drawable/spinner_bg</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/spinner_height</item>
+
+    </style>
+
+    <style name="redButtonsLong">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">50px</item>
+        <item name="android:background">@drawable/button_selector_red_theme</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white_color</item>
+        <item name="android:textSize">@dimen/textsize_btn</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+
+
+    </style>
+
+    <style name="redButtonsLongForCancel">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">60px</item>
+        <item name="android:background">@drawable/button_selector_red_theme</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white_color</item>
+        <item name="android:textSize">@dimen/textsize_btn</item>
+
+        <item name="android:textAllCaps">true</item>
+
+
+    </style>
+
+
+    <style name="arrow_style">
+
+
+        <item name="android:layout_marginRight">@dimen/margin_right_rightarrow</item>
+        <item name="android:textColor">@color/generic_blue</item>
+        <item name="android:textSize">@dimen/textsize_titlebar_label</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+
+    <style name="label_style">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16.5px</item>
+        <item name="android:gravity">center_vertical</item>
+
+    </style>
+
+
+    <style name="label_layout_row__style">
+        <item name="android:gravity">left|center_vertical</item>
+
+        <item name="android:layout_height">25px</item>
+        <item name="android:layout_marginBottom">@dimen/marginbottom_label</item>
+    </style>
+
+
+    <style name="linearInnerWhitePortion">
+
+
+        <item name="android:layout_marginBottom">40px</item>
+
+        <item name="android:layout_marginLeft">40px</item>
+        <item name="android:layout_marginRight">40px</item>
+        <item name="android:background">@color/white_color</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+
+    <dimen name="textsize_btn">18px</dimen>
+
+    <style name="keyPad_Month_L0_Layout_Style">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">240dp</item>
+        <item name="android:layout_height">320dp</item>
+        <item name="android:weightSum">4</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+
+    <style name="keypad_Month_Sub_Layout_Style">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:weightSum">3</item>
+    </style>
+
+    <style name="keypad_Month_actionListener_Layout_Style">
+
+
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/keypad_month_border</item>
+        <item name="android:clickable">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:weightSum">3</item>
+
+
+    </style>
+
+    <style name="keyPad_Month_TextView_1_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:gravity">bottom|center</item>
+        <item name="android:textSize">@dimen/keyPad_Month_TextView_1_Size</item>
+        <item name="android:textColor">@color/korean_Green_theme_TextView1_Color</item>
+
+    </style>
+
+    <style name="keyPad_Month_TextView_2_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center|top</item>
+        <item name="android:textSize">@dimen/keyPad_Month_TextView_2_Size</item>
+        <item name="android:textColor">@color/korean_Green_theme_TextView2_Color</item>
+
+    </style>
+
+
+    <style name="keyPad_Number_L0_Layout_Style">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">240dp</item>
+        <item name="android:layout_height">320dp</item>
+        <item name="android:weightSum">4</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+
+    <style name="keyPad_Number_Sub_Layout_Style">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:weightSum">3</item>
+    </style>
+
+    <style name="keyPad_Number_actionListener_Layout_Style">
+
+
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/keypad_number_border</item>
+        <item name="android:clickable">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:weightSum">2</item>
+
+
+    </style>
+
+    <style name="keyPad_Number_TextView_1_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/keyPad_Number_TextView_1_Size</item>
+        <item name="android:textColor">@color/black</item>
+
+    </style>
+
+    <style name="keyPad_Date_L0_Layout_Style">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">240dp</item>
+        <item name="android:layout_height">320dp</item>
+        <item name="android:weightSum">6</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+
+    <style name="keyPad_Date_Sub_Layout_Style">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:weightSum">6</item>
+    </style>
+
+    <style name="keyPad_Date_actionListener_Layout_Style">
+
+
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/keypad_date_border</item>
+        <item name="android:clickable">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:weightSum">2</item>
+
+
+    </style>
+
+    <style name="keyPad_Date_TextView_1_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/keyPad_Date_TextView_1_Size</item>
+        <item name="android:textColor">@color/black</item>
+
+    </style>
+
+    <style name="keyPad_Year_L0_style">
+        <item name="android:layout_width">240dp</item>
+        <item name="android:layout_height">320dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:weightSum">2</item>
+    </style>
+
+    <style name="keyPad_Year_ActionListener_style">
+        <item name="android:background">@drawable/keypad_border_up_left_bottom_right_month</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:clickable">true</item>
+
+
+    </style>
+
+    <style name="keyPad_Year_TextView_style">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/keyPad_Year_TextView_Size</item>
+
+    </style>
+</resources>

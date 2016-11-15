@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white_color"
+    android:baselineAligned="true"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/L0"
+        style="@style/keyPad_Month_L0_Layout_Style">
+
+        <LinearLayout
+            android:id="@+id/L0_1"
+            style="@style/keypad_Month_Sub_Layout_Style">
+
+            <LinearLayout
+                android:id="@+id/L0_1_1"
+                style="@style/keypad_Month_actionListener_Layout_Style">
+
+                <TextView
+                    android:id="@+id/txt1"
+                    style="@style/keyPad_Month_TextView_1_style"
+                    android:text="@string/bangla_01" />
+
+                <TextView
+                    android:id="@+id/txt1_1"
+                    style="@style/keyPad_Month_TextView_2_style"
+                    android:text="@string/bangla_January" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/L0_1_2"
+                style="@style/keypad_Month_actionListener_Layout_Style">
+
+                <TextView
+                    android:id="@+id/txt2"
+                    style="@style/keyPad_Month_TextView_1_style"
+                    android:text="@string/bangla_02" />
+
+                <TextView
+                    android:id="@+id/txt2_1"
+                    style="@style/keyPad_Month_TextView_2_style"
+                    android:text="@string/bangla_February" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/L0_1_3"
+                style="@style/keypad_Month_actionListener_Layout_Style">
+
+                <TextView
+                    android:id="@+id/txt3"
+                    style="@style/keyPad_Month_TextView_1_style"
+                    android:text="@string/bangla_03" />
+
+                <TextView
+                    android:id="@+id/txt3_1"
+                    style="@style/keyPad_Month_TextView_2_style"
+                    android:text="@string/bangla_March" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/L0_2"
+            style="@style/keypad_Month_Sub_Layout_Style">
+
+            <LinearLayout
+                android:id="@+id/L0_2_1"
+                style="@style/keypad_Month_actionListener_Layout_Style">
+
+                <TextView
+                    android:id="@+id/txt4"
+                    style="@style/keyPad_Month_TextView_1_style"
+                    android:text="@string/bangla_04" />
+
+                <TextView
+                    android:id="@+id/txt4_1"
+                    style="@style/keyPad_Month_TextView_2_style"
+                    android:text="@string/bangla_April" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/L0_2_2"
+                style="@style/keypad_Month_actionListener_Layout_Style">
+
+                <TextView
+                    android:id="@+id/txt5"
+                    style="@style/keyPad_Month_TextView_1_style"
+                    android:text="@string/bangla_05" />
+
+                <TextView
+                    android:id="@+id/txt5_1"
+                    style="@style/keyPad_Month_TextView_2_style"
+                    android:layout_width="match_parent"
+                    android:text="@string/bangla_May" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/L0_2_3"
+                style="@style/keypad_Month_actionListener_Layout_Style">
+
+                <TextView
+                    android:id="@+id/txt6"
+                    style="@style/keyPad_Month_TextView_1_style"
+                    android:text="@string/bangla_06" />
+
+                <TextView
+                    android:id="@+id/txt6_1"
+                    style="@style/keyPad_Month_TextView_2_style"
+                    android:text="@string/bangla_June" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/L0_3"
+            style="@style/keypad_Month_Sub_Layout_Style">
+
+
+            <LinearLayout
+                android:id="@+id/L0_3_1"
+                style="@style/keypad_Month_actionListener_Layout_Style">
+
+                <TextView
+                    android:id="@+id/txt7"
+                    style="@style/keyPad_Month_TextView_1_style"
+                    android:gravity="bottom|center"
+                    android:text="@string/bangla_07" />
+
+                <TextView
+                    android:id="@+id/txt7_1"
+                    style="@style/keyPad_Month_TextView_2_style"
+                    android:text="@string/bangla_July" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/L0_3_2"
+                style="@style/keypad_Month_actionListener_Layout_Style">
+
+                <TextView
+                    android:id="@+id/txt8"
+                    style="@style/keyPad_Month_TextView_1_style"
+                    android:text="@string/bangla_08" />
+
+                <TextView
+                    android:id="@+id/txt8_1"
+                    style="@style/keyPad_Month_TextView_2_style"
+                    android:text="@string/bangla_August" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/L0_3_3"
+                style="@style/keypad_Month_actionListener_Layout_Style">
+
+                <TextView
+                    android:id="@+id/txt9"
+                    style="@style/keyPad_Month_TextView_1_style"
+                    android:text="@string/bangla_09" />
+
+                <TextView
+                    android:id="@+id/txt9_1"
+                    style="@style/keyPad_Month_TextView_2_style"
+                    android:text="@string/bangla_September" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/L0_4"
+            style="@style/keypad_Month_Sub_Layout_Style">
+
+            <LinearLayout
+                android:id="@+id/L0_4_1"
+                style="@style/keypad_Month_actionListener_Layout_Style">
+
+                <TextView
+                    android:id="@+id/txt10"
+                    style="@style/keyPad_Month_TextView_1_style"
+                    android:text="@string/bangla_10" />
+
+                <TextView
+                    android:id="@+id/txt10_1"
+                    style="@style/keyPad_Month_TextView_2_style"
+                    android:text="@string/bangla_October" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/L0_4_2"
+                style="@style/keypad_Month_actionListener_Layout_Style">
+
+                <TextView
+                    android:id="@+id/txt11"
+                    style="@style/keyPad_Month_TextView_1_style"
+                    android:text="@string/bangla_11" />
+
+                <TextView
+                    android:id="@+id/txt11_1"
+                    style="@style/keyPad_Month_TextView_2_style"
+                    android:text="@string/bangla_November" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/L0_4_3"
+                style="@style/keypad_Month_actionListener_Layout_Style">
+
+                <TextView
+                    android:id="@+id/txt12"
+                    style="@style/keyPad_Month_TextView_1_style"
+                    android:text="@string/bangla_12" />
+
+                <TextView
+                    android:id="@+id/txt12_1"
+                    style="@style/keyPad_Month_TextView_2_style"
+                    android:text="@string/bangla_December" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

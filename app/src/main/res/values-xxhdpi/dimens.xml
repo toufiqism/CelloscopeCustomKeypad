@@ -1,0 +1,118 @@
+<resources>
+    <dimen name="fp_image_width">250px</dimen>
+    <dimen name="fp_image_height">250px</dimen>
+
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16px</dimen>
+    <dimen name="activity_vertical_margin">16px</dimen>
+    <dimen name="textsize__label_login">25sp</dimen>
+    <dimen name="labelheight_login">60px</dimen>
+    <dimen name="edittextheight__agentid_login">50px</dimen>
+    <dimen name="edittextheight__agentpin_login">50px</dimen>
+    <dimen name="buttonheight__login_login">50px</dimen>
+    <dimen name="margin__loginbox_login">20px</dimen>
+    <dimen name="layoutheight_login">40px</dimen>
+    <dimen name="layoutheight_bankmenu">50px</dimen>
+    <dimen name="layoutheight_navigation_bar">50px</dimen>
+    <dimen name="btn_logoutheight_bankmenu">40px</dimen>
+
+    <dimen name="img_height_cheque_photo_id">160px</dimen>
+
+    <dimen name="btn_logoutwidth_bankmenu">70px</dimen>
+    <dimen name="btn_logoutheight">35px</dimen>
+    <dimen name="btn_back_width">45px</dimen>
+    <dimen name="btn_height_40px">40px</dimen>
+    <dimen name="btn_height_normal">50px</dimen>
+    <dimen name="edittext_height_normal">45px</dimen>
+    <dimen name="layout_height_edittext_label">50px</dimen>
+    <dimen name="btn_back_height">45px</dimen>
+    <dimen name="btn_logoutwidth">35px</dimen>
+    <dimen name="btn_width_back">70px</dimen>
+    <dimen name="btn_height_back">40px</dimen>
+    <dimen name="btnwidth_connection">35px</dimen>
+    <dimen name="btnheight_connection">35px</dimen>
+    <dimen name="textsize__menutext_bankmenu">16px</dimen>
+    <dimen name="iconsize_customer_service">50px</dimen>
+    <dimen name="textsize_Label_customerservice">20sp</dimen>
+    <dimen name="textsize_titlebar_label">18px</dimen>
+    <dimen name="btnheight_display_amount_cashdeposit_self">60px</dimen>
+    <dimen name="edittext_height">50px</dimen>
+    <dimen name="displayheight_cashamount">60px</dimen>
+    <dimen name="marginleft_rightbuttn">4px</dimen>
+    <dimen name="layout_margin_top">6px</dimen>
+    <dimen name="layout_margin_top_low">1px</dimen>
+    <dimen name="layout_margin_bottom">6px</dimen>
+    <dimen name="layout_margin">8px</dimen>
+    <dimen name="textsize_normal">16sp</dimen>
+    <dimen name="img_height_customerpic">150px</dimen>
+    <dimen name="img_width_customerpic">150px</dimen>
+    <dimen name="img_height_customerpic_new_account">80px</dimen>
+    <dimen name="img_width_customerpic_new_account">80px</dimen>
+
+    <dimen name="img_height_photo_id">80px</dimen>
+    <dimen name="img_width_photo_id">130px</dimen>
+    <dimen name="labelwidth_bankmenu">250px</dimen>
+    <dimen name="iconsize_rightarrow">20px</dimen>
+    <dimen name="margin_right_rightarrow">5px</dimen>
+    <dimen name="layout_height_normal">60px</dimen>
+    <dimen name="layout_height_low">30px</dimen>
+    <dimen name="button_height_normal">50px</dimen>
+    <dimen name="menutextview_width_customerservices">180px</dimen>
+    <dimen name="textsize_cashdeposit_self_display">25sp</dimen>
+    <dimen name="btnsize_numberpad">92.5px</dimen>
+    <dimen name="btnsize_numberpad_small">82.5px</dimen>
+    <dimen name="btnsize_width_cancel_numberpad">75px</dimen>
+    <dimen name="btnsize_height_cancel_numberpad">71px</dimen>
+    <dimen name="marginleft_cancel_numberpad">2px</dimen>
+    <dimen name="marginbottom_cancel_numberpad">2px</dimen>
+    <dimen name="btnsize_width_next_numberpad">73px</dimen>
+    <dimen name="btnsize_height_next_numberpad">232px</dimen>
+
+    <dimen name="btnsize_width_next_numberpad_small">76.5px</dimen>
+    <dimen name="btnsize_height_next_numberpad_small">202px</dimen>
+
+
+    <dimen name="margintop_next_numberpad">1px</dimen>
+    <dimen name="btnsize_height_clear_numberpad">92.5px</dimen>
+    <dimen name="btnsize_width_clear_numberpad">76px</dimen>
+    <dimen name="marginleft_layoutmenu_customerservices">10px</dimen>
+    <dimen name="marginright_layoutmenu_customerservices">10px</dimen>
+    <dimen name="margintop_layoutmenu_customerservices">40px</dimen>
+    <dimen name="marginbottom_layoutmenu_customerservices">40px</dimen>
+    <dimen name="layoutheight_customerpic_imageview">100px</dimen>
+    <dimen name="layoutwidth_customerpic_imageview">100px</dimen>
+    <dimen name="margin_layout_normal">8px</dimen>
+    <dimen name="margin_top_normal">5px</dimen>
+    <dimen name="layout_height_qrscanning_info">55px</dimen>
+    <dimen name="layout_margin_cashamount_numberpad">7px</dimen>
+    <dimen name="layout_height_app_header">60px</dimen>
+    <dimen name="layout_height_new_account">45px</dimen>
+    <dimen name="camrea_capture_preview_height">340px</dimen>
+    <dimen name="padding_top">20px</dimen>
+    <dimen name="padding_conncection_button">20px</dimen>
+
+    <!-- City Agent Dimens Start -->
+    <dimen name="parent_layout_padding">40px</dimen>
+    <dimen name="parent_layout_margin">40px</dimen>
+    <dimen name="imageview_margin">10px</dimen>
+    <dimen name="child_layout_margin">10px</dimen>
+    <dimen name="child_layout_padding">10px</dimen>
+    <dimen name="edittext_height_city">40px</dimen>
+    <dimen name="spinner_height">70px</dimen>
+
+
+
+    <dimen name="margintop_layout_row">20px</dimen>
+
+    <dimen name="marginbottom_label">3px</dimen>
+    <dimen name="marginright_arrow">10px</dimen>
+    <dimen name="marginleft_arrow">5px</dimen>
+    <dimen name="margin_customer_pic">10px</dimen>
+    <dimen name="width_customer_pic">120px</dimen>
+    <dimen name="height_customer_pic">120px</dimen>
+    <dimen name="layout_height_kyc_risk_score">52px</dimen>
+
+    <!-- End -->
+
+</resources>

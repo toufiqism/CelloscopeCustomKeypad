@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<
+    <Button
+        android:id="@+id/button"
+        style="@style/NumberPadButtonStyle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text=">"
+        android:textSize="48sp"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:id="@+id/chequeFrontFrameLayoutInReceiveCheck"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentRight="true"
+        android:clickable="true">
+
+        <Button
+            style="@style/NumberPadButtonStyleText"
+            android:layout_width="120dp"
+            android:layout_height="120dp" />
+
+        <TextView
+            android:id="@+id/ax"
+
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerVertical="true"
+            android:gravity="top|center"
+            android:text="০১"
+            android:textSize="64sp" />
+
+        <TextView
+            android:id="@+id/lblChequeFrontInReceiveCheckActivity"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="27dp"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center"
+            android:text="জানুয়ারী"
+            android:textColor="@color/soft_red"
+            android:textSize="24sp" />
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/asd"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/chequeFrontFrameLayoutInReceiveCheck"
+        android:clickable="true">
+
+        <Button
+            style="@style/NumberPadButtonStyleText"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:id="@+id/fasax"
+
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:gravity="top|center"
+            android:text="০২"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/asdvv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="17dp"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center"
+            android:text="ফেব্রুয়ারি"
+            android:textColor="@color/soft_red"
+            android:textSize="20sp" />
+
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignBottom="@+id/asd"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/squarebackgoundred"
+        android:gravity="center"
+        android:text="৩১"
+        android:textColor="@color/black"
+        android:textSize="48sp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button2"
+        android:background="@drawable/squarebackgoundred"
+        android:gravity="center"
+        android:text="২৯"
+        android:textColor="@color/black"
+        android:textSize="48sp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignTop="@+id/button2"
+        android:layout_toEndOf="@+id/button2"
+        android:background="@drawable/squarebackgoundred"
+        android:gravity="center"
+        android:text="৩০"
+        android:textColor="@color/black"
+        android:textSize="48sp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/button4"
+        android:layout_toRightOf="@+id/button2"
+        android:background="@drawable/squarebackgoundred"
+        android:gravity="center"
+        android:text="২৮"
+        android:textColor="@color/black"
+        android:textSize="48sp" />
+
+</RelativeLayout>

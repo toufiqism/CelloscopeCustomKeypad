@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <layer-list>
+            <!-- SHADOW -->
+            <item>
+                <shape>
+                    <solid android:color="@color/button_color" />
+
+                </shape>
+            </item>
+            <!-- BUTTON -->
+            <item android:bottom="2dp">
+                <shape>
+
+                    <gradient android:angle="270" android:centerColor="@color/button_color" android:centerX="35%" android:endColor="@color/button_color" android:startColor="@color/button_color" android:type="linear" />
+
+                    <padding android:bottom="0dp" android:left="0dp" android:right="0dp" android:top="0dp" />
+
+
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <item android:state_pressed="true">
+        <layer-list>
+            <!-- SHADOW -->
+            <item>
+                <shape>
+                    <solid android:color="@color/button_color" />
+
+                </shape>
+            </item>
+            <!-- BUTTON -->
+            <item android:bottom="2dp">
+                <shape>
+
+                    <gradient android:angle="270" android:centerColor="@color/button_color" android:centerX="35%" android:endColor="@color/button_color" android:startColor="@color/button_color" android:type="linear" />
+
+                    <padding android:bottom="0dp" android:left="0dp" android:right="0dp" android:top="0dp" />
+
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>
