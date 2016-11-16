@@ -118,18 +118,11 @@
     <dimen name="forWard_BackWardButtonSize_">155dp</dimen>
 
 
-    <dimen name="keyPad_Month_TextView_1_Size">36sp</dimen>
-    <dimen name="keyPad_Month_TextView_2_Size">24sp</dimen>
-
-
-    <dimen name="keyPad_Number_TextView_1_Size">44sp</dimen>
-
-
-    <dimen name="keyPad_Date_TextView_1_Size">36sp</dimen>
-
-    <dimen name="date_text_size">44sp</dimen>
-
-    <dimen name="keyPad_Year_TextView_Size">54sp</dimen>
-
+    <dimen name="keyPad_Month_TextView_1_Size">36dp</dimen>
+    <dimen name="keyPad_Month_TextView_2_Size">24dp</dimen>
+    <dimen name="keyPad_Number_TextView_1_Size">44dp</dimen>
+    <dimen name="keyPad_Date_TextView_1_Size">36dp</dimen>
+    <dimen name="date_text_size">44dp</dimen>
+    <dimen name="keyPad_Year_TextView_Size">54dp</dimen>
     <dimen name="app_header_height_size">115dp</dimen>
 </resources>

@@ -156,12 +156,12 @@
                         android:background="@drawable/keypad_border_upper_left_month"
                         app:alphaLabel="@string/bangla_February"
                         app:alphaTextColor="@color/bill_month_text_bangla_color"
-                        app:alphaTextSize="24sp"
+                        app:alphaTextSize="@dimen/keyPad_Month_TextView_2_Size"
                         app:alphaTextViewFont="@string/font_kalpurush"
                         app:numTextViewFont="@string/font_lohit_bangla"
                         app:numericLabel="@string/bangla_02"
                         app:numericTextColor="@color/bill_month_text_number_color"
-                        app:numericTextSize="36sp" />
+                        app:numericTextSize="@dimen/keyPad_Month_TextView_1_Size" />
 
 
                     <LinearLayout
@@ -188,22 +188,37 @@
                         android:background="@drawable/keypad_border_up_left_right_month"
                         app:alphaLabel="@string/bangla_March"
                         app:alphaTextColor="@color/bill_month_text_bangla_color"
-                        app:alphaTextSize="24sp"
+                        app:alphaTextSize="@dimen/keyPad_Month_TextView_2_Size"
                         app:alphaTextViewFont="@string/font_kalpurush"
                         app:numTextViewFont="@string/font_lohit_bangla"
                         app:numericLabel="@string/bangla_03"
                         app:numericTextColor="@color/bill_month_text_number_color"
-                        app:numericTextSize="36sp" />
+                        app:numericTextSize="@dimen/keyPad_Month_TextView_1_Size" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/L0_2"
                     style="@style/keypad_Month_Sub_Layout_Style">
 
+                    <android.csb.net.mylibrary.MonthKeyboardView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/keypad_border_upper_left_month"
+                        app:alphaLabel="@string/bangla_April"
+                        app:alphaTextColor="@color/bill_month_text_bangla_color"
+                        app:alphaTextSize="@dimen/keyPad_Month_TextView_2_Size"
+                        app:alphaTextViewFont="@string/font_kalpurush"
+                        app:numTextViewFont="@string/font_lohit_bangla"
+                        app:numericLabel="@string/bangla_04"
+                        app:numericTextColor="@color/bill_month_text_number_color"
+                        app:numericTextSize="@dimen/keyPad_Month_TextView_1_Size" />
+
                     <LinearLayout
                         android:id="@+id/L0_2_1"
                         style="@style/keypad_Month_actionListener_Layout_Style"
-                        android:background="@drawable/keypad_border_upper_left_month">
+                        android:background="@drawable/keypad_border_upper_left_month"
+                        android:visibility="gone">
 
                         <TextView
                             android:id="@+id/txt4"
@@ -217,10 +232,25 @@
 
                     </LinearLayout>
 
+                    <android.csb.net.mylibrary.MonthKeyboardView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/keypad_border_upper_left_month"
+                        app:alphaLabel="@string/bangla_May"
+                        app:alphaTextColor="@color/bill_month_text_bangla_color"
+                        app:alphaTextSize="@dimen/keyPad_Month_TextView_2_Size"
+                        app:alphaTextViewFont="@string/font_kalpurush"
+                        app:numTextViewFont="@string/font_lohit_bangla"
+                        app:numericLabel="@string/bangla_05"
+                        app:numericTextColor="@color/bill_month_text_number_color"
+                        app:numericTextSize="@dimen/keyPad_Month_TextView_1_Size" />
+
                     <LinearLayout
                         android:id="@+id/L0_2_2"
                         style="@style/keypad_Month_actionListener_Layout_Style"
-                        android:background="@drawable/keypad_border_upper_left_month">
+                        android:background="@drawable/keypad_border_upper_left_month"
+                        android:visibility="gone">
 
                         <TextView
                             android:id="@+id/txt5"
@@ -235,10 +265,25 @@
 
                     </LinearLayout>
 
+                    <android.csb.net.mylibrary.MonthKeyboardView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/keypad_border_up_left_right_month"
+                        app:alphaLabel="@string/bangla_June"
+                        app:alphaTextColor="@color/bill_month_text_bangla_color"
+                        app:alphaTextSize="@dimen/keyPad_Month_TextView_2_Size"
+                        app:alphaTextViewFont="@string/font_kalpurush"
+                        app:numTextViewFont="@string/font_lohit_bangla"
+                        app:numericLabel="@string/bangla_06"
+                        app:numericTextColor="@color/bill_month_text_number_color"
+                        app:numericTextSize="@dimen/keyPad_Month_TextView_1_Size" />
+
                     <LinearLayout
                         android:id="@+id/L0_2_3"
                         style="@style/keypad_Month_actionListener_Layout_Style"
-                        android:background="@drawable/keypad_border_up_left_right_month">
+                        android:background="@drawable/keypad_border_up_left_right_month"
+                        android:visibility="gone">
 
                         <TextView
                             android:id="@+id/txt6"
@@ -262,7 +307,8 @@
                     <LinearLayout
                         android:id="@+id/L0_3_1"
                         style="@style/keypad_Month_actionListener_Layout_Style"
-                        android:background="@drawable/keypad_border_upper_left_month">
+                        android:background="@drawable/keypad_border_upper_left_month"
+                        android:visibility="gone">
 
                         <TextView
                             android:id="@+id/txt7"
@@ -277,10 +323,26 @@
 
                     </LinearLayout>
 
+                    <android.csb.net.mylibrary.MonthKeyboardView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/keypad_border_upper_left_month"
+                        app:alphaLabel="@string/bangla_July"
+                        app:alphaTextColor="@color/bill_month_text_bangla_color"
+                        app:alphaTextSize="@dimen/keyPad_Month_TextView_2_Size"
+                        app:alphaTextViewFont="@string/font_kalpurush"
+                        app:numTextViewFont="@string/font_lohit_bangla"
+                        app:numericLabel="@string/bangla_07"
+                        app:numericTextColor="@color/bill_month_text_number_color"
+                        app:numericTextSize="@dimen/keyPad_Month_TextView_1_Size" />
+
+
                     <LinearLayout
                         android:id="@+id/L0_3_2"
                         style="@style/keypad_Month_actionListener_Layout_Style"
-                        android:background="@drawable/keypad_border_upper_left_month">
+                        android:background="@drawable/keypad_border_upper_left_month"
+                        android:visibility="gone">
 
                         <TextView
                             android:id="@+id/txt8"
@@ -294,10 +356,26 @@
 
                     </LinearLayout>
 
+                    <android.csb.net.mylibrary.MonthKeyboardView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/keypad_border_upper_left_month"
+                        app:alphaLabel="@string/bangla_August"
+                        app:alphaTextColor="@color/bill_month_text_bangla_color"
+                        app:alphaTextSize="@dimen/keyPad_Month_TextView_2_Size"
+                        app:alphaTextViewFont="@string/font_kalpurush"
+                        app:numTextViewFont="@string/font_lohit_bangla"
+                        app:numericLabel="@string/bangla_08"
+                        app:numericTextColor="@color/bill_month_text_number_color"
+                        app:numericTextSize="@dimen/keyPad_Month_TextView_1_Size" />
+
+
                     <LinearLayout
                         android:id="@+id/L0_3_3"
                         style="@style/keypad_Month_actionListener_Layout_Style"
-                        android:background="@drawable/keypad_border_up_left_right_month">
+                        android:background="@drawable/keypad_border_up_left_right_month"
+                        android:visibility="gone">
 
                         <TextView
                             android:id="@+id/txt9"
@@ -310,6 +388,21 @@
                             android:text="@string/bangla_September" />
 
                     </LinearLayout>
+
+                    <android.csb.net.mylibrary.MonthKeyboardView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/keypad_border_up_left_right_month"
+                        app:alphaLabel="@string/bangla_September"
+                        app:alphaTextColor="@color/bill_month_text_bangla_color"
+                        app:alphaTextSize="@dimen/keyPad_Month_TextView_2_Size"
+                        app:alphaTextViewFont="@string/font_kalpurush"
+                        app:numTextViewFont="@string/font_lohit_bangla"
+                        app:numericLabel="@string/bangla_09"
+                        app:numericTextColor="@color/bill_month_text_number_color"
+                        app:numericTextSize="@dimen/keyPad_Month_TextView_1_Size" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -319,7 +412,8 @@
                     <LinearLayout
                         android:id="@+id/L0_4_1"
                         style="@style/keypad_Month_actionListener_Layout_Style"
-                        android:background="@drawable/keypad_border_up_left_bottom_month">
+                        android:background="@drawable/keypad_border_up_left_bottom_month"
+                        android:visibility="gone">
 
                         <TextView
                             android:id="@+id/txt10"
@@ -333,10 +427,26 @@
 
                     </LinearLayout>
 
+                    <android.csb.net.mylibrary.MonthKeyboardView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/keypad_border_up_left_bottom_month"
+                        app:alphaLabel="@string/bangla_October"
+                        app:alphaTextColor="@color/bill_month_text_bangla_color"
+                        app:alphaTextSize="@dimen/keyPad_Month_TextView_2_Size"
+                        app:alphaTextViewFont="@string/font_kalpurush"
+                        app:numTextViewFont="@string/font_lohit_bangla"
+                        app:numericLabel="@string/bangla_10"
+                        app:numericTextColor="@color/bill_month_text_number_color"
+                        app:numericTextSize="@dimen/keyPad_Month_TextView_1_Size" />
+
+
                     <LinearLayout
                         android:id="@+id/L0_4_2"
                         style="@style/keypad_Month_actionListener_Layout_Style"
-                        android:background="@drawable/keypad_border_up_left_bottom_month">
+                        android:background="@drawable/keypad_border_up_left_bottom_month"
+                        android:visibility="gone">
 
                         <TextView
                             android:id="@+id/txt11"
@@ -350,10 +460,25 @@
 
                     </LinearLayout>
 
+                    <android.csb.net.mylibrary.MonthKeyboardView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/keypad_border_up_left_bottom_month"
+                        app:alphaLabel="@string/bangla_November"
+                        app:alphaTextColor="@color/bill_month_text_bangla_color"
+                        app:alphaTextSize="@dimen/keyPad_Month_TextView_2_Size"
+                        app:alphaTextViewFont="@string/font_kalpurush"
+                        app:numTextViewFont="@string/font_lohit_bangla"
+                        app:numericLabel="@string/bangla_11"
+                        app:numericTextColor="@color/bill_month_text_number_color"
+                        app:numericTextSize="@dimen/keyPad_Month_TextView_1_Size" />
+
                     <LinearLayout
                         android:id="@+id/L0_4_3"
                         style="@style/keypad_Month_actionListener_Layout_Style"
-                        android:background="@drawable/keypad_border_up_left_bottom_right_month">
+                        android:background="@drawable/keypad_border_up_left_bottom_right_month"
+                        android:visibility="gone">
 
                         <TextView
                             android:id="@+id/txt12"
@@ -366,6 +491,21 @@
                             android:text="@string/bangla_December" />
 
                     </LinearLayout>
+
+                    <android.csb.net.mylibrary.MonthKeyboardView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/keypad_border_up_left_bottom_right_month"
+                        app:alphaLabel="@string/bangla_December"
+                        app:alphaTextColor="@color/bill_month_text_bangla_color"
+                        app:alphaTextSize="@dimen/keyPad_Month_TextView_2_Size"
+                        app:alphaTextViewFont="@string/font_kalpurush"
+                        app:numTextViewFont="@string/font_lohit_bangla"
+                        app:numericLabel="@string/bangla_12"
+                        app:numericTextColor="@color/bill_month_text_number_color"
+                        app:numericTextSize="@dimen/keyPad_Month_TextView_1_Size" />
+
 
                 </LinearLayout>
 

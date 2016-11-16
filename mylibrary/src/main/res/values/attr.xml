@@ -11,7 +11,12 @@
         <attr name="alphaTextColor" format="reference|color" />
         <attr name="alphaTextViewFont" format="string" />
 
-    </declare-styleable>
 
+    </declare-styleable>
+    <declare-styleable name="CelloscopeKeypadView">
+        <attr name="row" format="integer" />
+        <attr name="column" format="integer" />
+
+    </declare-styleable>
 
 </resources>
