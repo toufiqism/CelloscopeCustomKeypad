@@ -664,4 +664,9 @@
     <string name="bangla_November">নভেম্বর</string>
     <string name="bangla_December">ডিসেম্বর</string>
 
+
+    <string name="font_kalpurush">kalpurush.ttf</string>
+    <string name="font_muktinarrow">muktinarrow.ttf</string>
+    <string name="font_lohit_bangla">Lohit_Bengali.ttf</string>
+
 </resources>

@@ -48,17 +48,12 @@ public class ButtonActivity extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        try {
-            rootView = inflater.inflate(R.layout.activity_final_layout, container, false);
-            init(rootView);
-            regi();
-            dayKeypadController = new DayKeypadController(mCon, rootView);
+        rootView = inflater.inflate(R.layout.activity_final_layout, container, false);
+        init(rootView);
+        regi();
+//        dayKeypadController = new DayKeypadController(mCon, rootView);
 
-            return rootView;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
+        return rootView;
     }
 
     private void regi() {
@@ -300,21 +295,14 @@ public class ButtonActivity extends Fragment {
         Year_L0_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    isYearSelected(year);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                isYearSelected(year);
+
             }
         });
         Year_L0_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    isYearSelected(year - 1);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                isYearSelected(year - 1);
             }
         });
         L0_1_1.setOnClickListener(new View.OnClickListener() {
@@ -582,7 +570,7 @@ public class ButtonActivity extends Fragment {
 
     }
 
-    private void isYearSelected(int value) throws Exception {
+    private void isYearSelected(int value) {
         if (value == year) {
             Year_L0_1.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
             Year_L0_2.setBackground(getResources().getDrawable(R.drawable.keypad_border_up_left_bottom_right_month));
@@ -594,7 +582,7 @@ public class ButtonActivity extends Fragment {
         }
     }
 
-    private void init(View rootView) throws Exception {
+    private void init(View rootView) {
         layoutFragmentContainerInMobileNumberInput_date = (LinearLayout) rootView.findViewById(R.id.layoutFragmentContainerInMobileNumberInput_date);
         layoutFragmentContainerInMobileNumberInput_Month = (LinearLayout) rootView.findViewById(R.id.layoutFragmentContainerInMobileNumberInput_Month);
         layoutFragmentContainerInMobileNumberInput_year = (LinearLayout) rootView.findViewById(R.id.layoutFragmentContainerInMobileNumberInput_year);
@@ -802,7 +790,7 @@ public class ButtonActivity extends Fragment {
         isYearSelected(year);
     }
 
-    public static String getBanglaFromEnglish(int intNum) throws Exception {
+    public static String getBanglaFromEnglish(int intNum){
 
         String engNum = String.valueOf(intNum);
         char[] cArray = engNum.toCharArray();
