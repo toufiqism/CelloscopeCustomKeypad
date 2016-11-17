@@ -105,8 +105,8 @@
                         app:alphaLabel="@string/bangla_January"
                         app:alphaTextColor="@color/bill_month_text_bangla_color"
                         app:alphaTextSize="@dimen/keyPad_Month_TextView_2_Size"
-                        app:alphaTextViewFont="@string/font_kalpurush"
-                        app:numTextViewFont="@string/font_lohit_bangla"
+
+
                         app:numericLabel="@string/bangla_01"
                         app:numericTextColor="@color/bill_month_text_number_color"
                         app:numericTextSize="@dimen/keyPad_Month_TextView_1_Size" />

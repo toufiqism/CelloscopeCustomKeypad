@@ -10,6 +10,8 @@ import android.widget.LinearLayout;
 
 public class CelloscopeKeypadView extends LinearLayout {
     int row, column;
+
+    LinearLayout ll;
     LinearLayout.LayoutParams celloscopeKeypadLayoutParamsForMonthKeyboard = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 
     Context context;
@@ -36,7 +38,7 @@ public class CelloscopeKeypadView extends LinearLayout {
 
     private void initUtils() {
         setOrientation(LinearLayout.VERTICAL);
-
+        ll = new LinearLayout(context);
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
                 MonthKeyboardView monthKeyboardView = new MonthKeyboardView(context);
