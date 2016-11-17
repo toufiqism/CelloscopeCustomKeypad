@@ -641,5 +641,34 @@
         <item>Urdu</item>
         <item>Vietnamese</item>
     </string-array>
+    <string-array name="alphaValueMonth">
+        <item>জানুয়ারী</item>
+        <item>ফেব্রুয়ারী</item>
+        <item>মার্চ</item>
+        <item>এপ্রিল</item>
+        <item>মে</item>
+        <item>জুন</item>
+        <item>জুলাই</item>
+        <item>আগস্ট</item>
+        <item>সেপ্টেম্বর</item>
+        <item>অক্টোবর</item>
+        <item>নভেম্বর</item>
+        <item>ডিসেম্বর</item>
 
+    </string-array>
+    <string-array name="numValueMonth">
+        <item>০১</item>
+        <item>০২</item>
+        <item>০৩</item>
+        <item>০৪</item>
+        <item>০৫</item>
+        <item>০৬</item>
+        <item>০৭</item>
+        <item>০৮</item>
+        <item>০৯</item>
+        <item>১০</item>
+        <item>১১</item>
+        <item>১২</item>
+
+    </string-array>
 </resources>

@@ -16,6 +16,8 @@
     <declare-styleable name="CelloscopeKeypadView">
         <attr name="row" format="integer" />
         <attr name="column" format="integer" />
+        <attr name="alphaValue" format="reference" />
+        <attr name="numValue" format="reference" />
 
     </declare-styleable>
 

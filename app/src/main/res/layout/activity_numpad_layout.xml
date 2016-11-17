@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bill_background"
@@ -42,9 +43,18 @@
             android:gravity="center"
             android:orientation="horizontal">
 
+            <android.csb.net.mylibrary.CelloscopeKeypadView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:alphaValue="@array/alphaValueMonth"
+                app:column="3"
+                app:numValue="@array/numValueMonth"
+                app:row="4" />
+
             <LinearLayout
                 android:id="@+id/Num_L0"
-                style="@style/keyPad_Number_L0_Layout_Style">
+                style="@style/keyPad_Number_L0_Layout_Style"
+                android:visibility="gone">
 
                 <LinearLayout
                     android:id="@+id/Num_L0_1"

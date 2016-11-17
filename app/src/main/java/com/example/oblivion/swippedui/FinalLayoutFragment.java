@@ -3,6 +3,7 @@ package com.example.oblivion.swippedui;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.csb.net.mylibrary.CelloscopeKeypadView;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -23,7 +24,7 @@ import java.util.Calendar;
 
 
 @SuppressLint("ValidFragment")
-public class ButtonActivity extends Fragment {
+public class FinalLayoutFragment extends Fragment {
     int year;
     Calendar now;
 
@@ -40,8 +41,10 @@ public class ButtonActivity extends Fragment {
     private TextView txtYearUpper;
     private TextView txtYearLower;
     DayKeypadController dayKeypadController;
+    LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+    LinearLayout layoutTest;
 
-    public ButtonActivity(Context c) {
+    public FinalLayoutFragment(Context c) {
         mCon = c;
     }
 
@@ -583,6 +586,15 @@ public class ButtonActivity extends Fragment {
     }
 
     private void init(View rootView) {
+        /*try {
+            layoutTest = (LinearLayout) rootView.findViewById(R.id.layoutTest);
+            CelloscopeKeypadView celloscopeKeypadView = new CelloscopeKeypadView(mCon);
+            celloscopeKeypadView.newInstance(3, 3);
+            celloscopeKeypadView.setLayoutParams(layoutParams);
+            layoutTest.addView(celloscopeKeypadView, 0);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }*/
         layoutFragmentContainerInMobileNumberInput_date = (LinearLayout) rootView.findViewById(R.id.layoutFragmentContainerInMobileNumberInput_date);
         layoutFragmentContainerInMobileNumberInput_Month = (LinearLayout) rootView.findViewById(R.id.layoutFragmentContainerInMobileNumberInput_Month);
         layoutFragmentContainerInMobileNumberInput_year = (LinearLayout) rootView.findViewById(R.id.layoutFragmentContainerInMobileNumberInput_year);
@@ -790,7 +802,7 @@ public class ButtonActivity extends Fragment {
         isYearSelected(year);
     }
 
-    public static String getBanglaFromEnglish(int intNum){
+    public static String getBanglaFromEnglish(int intNum) {
 
         String engNum = String.valueOf(intNum);
         char[] cArray = engNum.toCharArray();

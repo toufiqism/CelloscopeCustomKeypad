@@ -173,7 +173,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
                 case 0:
                     // The other sections of the app are dummy placeholders.
 
-                    return new ButtonActivity(MainActivity.this);
+                    return new FinalLayoutFragment(MainActivity.this);
                 case 1:
 
                     return new NumpadLayout();

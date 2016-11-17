@@ -38,7 +38,7 @@ public class MonthKeyboardView extends FrameLayout {
     FrameLayout.LayoutParams numericMonthTextViewFrameLayoutParams = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
     FrameLayout.LayoutParams alphaMonthTextViewFrameLayoutParams = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
 
-    public MonthKeyboardView(Context context) {
+    protected MonthKeyboardView(Context context) {
         super(context);
         this.context = context;
         initUtils();
@@ -132,7 +132,10 @@ public class MonthKeyboardView extends FrameLayout {
 
     public void setNumValue(String numValue) {
         this.numValue = numValue;
-        numericMonthTextView.setText(this.numValue);
+        numericMonthTextView.setTypeface(getTypeface(numTVFont));
+        numericMonthTextView.setText(numValue);
+        numericMonthTextView.setTextSize(44);
+        numericMonthTextView.setTextColor(Color.BLACK);
         invalidate();
         requestLayout();
     }
@@ -144,22 +147,11 @@ public class MonthKeyboardView extends FrameLayout {
     public void setAlphaValue(String alphaValue) {
         this.alphaValue = alphaValue;
         alphaMonthTextView.setText(this.numValue);
+        alphaMonthTextView.setTextColor(Color.BLACK);
+        alphaMonthTextView.setTextSize(24);
+        alphaMonthTextView.setTypeface(getTypeface(alphaTVFont));
         invalidate();
         requestLayout();
     }
 
-    public static int convertSpToPixels(float sp, Context context) {
-        int px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, sp, context.getResources().getDisplayMetrics());
-        return px;
-    }
-
-    public static int convertDpToPixels(float dp, Context context) {
-        int px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.getResources().getDisplayMetrics());
-        return px;
-    }
-
-    public static int convertDpToSp(float dp, Context context) {
-        int sp = (int) (convertDpToPixels(dp, context) / (float) convertSpToPixels(dp, context));
-        return sp;
-    }
 }
