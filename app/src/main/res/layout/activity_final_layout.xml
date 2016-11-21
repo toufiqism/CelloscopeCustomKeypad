@@ -102,7 +102,8 @@
                     android:id="@+id/L0_1"
                     style="@style/keypad_Month_Sub_Layout_Style">
 
-                    <android.csb.net.mylibrary.MonthKeyboardView
+                    <com.csb.net.celloscopeKeypadLibrary.MonthKeyView
+                        android:id="@+id/l1"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -154,7 +155,8 @@
 
                     </LinearLayout>
 
-                    <android.csb.net.mylibrary.MonthKeyboardView
+                    <com.csb.net.celloscopeKeypadLibrary.MonthKeyView
+                        android:id="@+id/l2"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -186,7 +188,8 @@
                             android:text="@string/bangla_March" />
                     </LinearLayout>
 
-                    <android.csb.net.mylibrary.MonthKeyboardView
+                    <com.csb.net.celloscopeKeypadLibrary.MonthKeyView
+                        android:id="@+id/l3"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -205,7 +208,8 @@
                     android:id="@+id/L0_2"
                     style="@style/keypad_Month_Sub_Layout_Style">
 
-                    <android.csb.net.mylibrary.MonthKeyboardView
+                    <com.csb.net.celloscopeKeypadLibrary.MonthKeyView
+                        android:id="@+id/l4"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -237,7 +241,8 @@
 
                     </LinearLayout>
 
-                    <android.csb.net.mylibrary.MonthKeyboardView
+                    <com.csb.net.celloscopeKeypadLibrary.MonthKeyView
+                        android:id="@+id/l5"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -270,7 +275,8 @@
 
                     </LinearLayout>
 
-                    <android.csb.net.mylibrary.MonthKeyboardView
+                    <com.csb.net.celloscopeKeypadLibrary.MonthKeyView
+                        android:id="@+id/l6"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -328,7 +334,8 @@
 
                     </LinearLayout>
 
-                    <android.csb.net.mylibrary.MonthKeyboardView
+                    <com.csb.net.celloscopeKeypadLibrary.MonthKeyView
+                        android:id="@+id/l7"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -361,7 +368,8 @@
 
                     </LinearLayout>
 
-                    <android.csb.net.mylibrary.MonthKeyboardView
+                    <com.csb.net.celloscopeKeypadLibrary.MonthKeyView
+                        android:id="@+id/l8"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -394,7 +402,8 @@
 
                     </LinearLayout>
 
-                    <android.csb.net.mylibrary.MonthKeyboardView
+                    <com.csb.net.celloscopeKeypadLibrary.MonthKeyView
+                        android:id="@+id/l9"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -432,7 +441,8 @@
 
                     </LinearLayout>
 
-                    <android.csb.net.mylibrary.MonthKeyboardView
+                    <com.csb.net.celloscopeKeypadLibrary.MonthKeyView
+                        android:id="@+id/l10"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -465,7 +475,8 @@
 
                     </LinearLayout>
 
-                    <android.csb.net.mylibrary.MonthKeyboardView
+                    <com.csb.net.celloscopeKeypadLibrary.MonthKeyView
+                        android:id="@+id/l11"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -497,7 +508,8 @@
 
                     </LinearLayout>
 
-                    <android.csb.net.mylibrary.MonthKeyboardView
+                    <com.csb.net.celloscopeKeypadLibrary.MonthKeyView
+                        android:id="@+id/l12"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"

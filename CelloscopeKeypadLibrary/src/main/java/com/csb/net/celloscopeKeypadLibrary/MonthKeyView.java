@@ -1,26 +1,23 @@
-package android.csb.net.mylibrary;
+package com.csb.net.celloscopeKeypadLibrary;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.LruCache;
-import android.util.TypedValue;
 import android.view.Gravity;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /**
  * Created by Tofiq Akbar on 11/15/16.
  */
 
-public class MonthKeyboardView extends FrameLayout {
+public class MonthKeyView extends FrameLayout {
     TextView numericMonthTextView;
     TextView alphaMonthTextView;
 
@@ -38,20 +35,21 @@ public class MonthKeyboardView extends FrameLayout {
     FrameLayout.LayoutParams numericMonthTextViewFrameLayoutParams = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
     FrameLayout.LayoutParams alphaMonthTextViewFrameLayoutParams = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
 
-    protected MonthKeyboardView(Context context) {
+
+    protected MonthKeyView(Context context) {
         super(context);
         this.context = context;
         initUtils();
     }
 
-    public MonthKeyboardView(Context context, AttributeSet attrs) {
+    public MonthKeyView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.context = context;
         setParams(attrs);
         initUtils();
     }
 
-    public MonthKeyboardView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public MonthKeyView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         this.context = context;
         setParams(attrs);
@@ -59,15 +57,15 @@ public class MonthKeyboardView extends FrameLayout {
     }
 
     private void setParams(AttributeSet attrs) {
-        TypedArray typedArray = this.context.getTheme().obtainStyledAttributes(attrs, R.styleable.MonthKeyboardView, 0, 0);
-        numValue = typedArray.getString(R.styleable.MonthKeyboardView_numericLabel);
-        numTVColor = typedArray.getInt(R.styleable.MonthKeyboardView_numericTextColor, Color.BLACK);
-        numTVSize = typedArray.getDimension(R.styleable.MonthKeyboardView_numericTextSize, 16);
-        numTVFont = typedArray.getString(R.styleable.MonthKeyboardView_numTextViewFont);
-        alphaValue = typedArray.getString(R.styleable.MonthKeyboardView_alphaLabel);
-        alphaTVColor = typedArray.getInt(R.styleable.MonthKeyboardView_alphaTextColor, Color.BLACK);
-        alphaTVSize = typedArray.getDimension(R.styleable.MonthKeyboardView_alphaTextSize, 16);
-        alphaTVFont = typedArray.getString(R.styleable.MonthKeyboardView_alphaTextViewFont);
+        TypedArray typedArray = this.context.getTheme().obtainStyledAttributes(attrs, R.styleable.MonthKeyView, 0, 0);
+        numValue = typedArray.getString(R.styleable.MonthKeyView_numericLabel);
+        numTVColor = typedArray.getInt(R.styleable.MonthKeyView_numericTextColor, Color.BLACK);
+        numTVSize = typedArray.getDimension(R.styleable.MonthKeyView_numericTextSize, convertPixelsToDp(16, context));
+        numTVFont = typedArray.getString(R.styleable.MonthKeyView_numTextViewFont);
+        alphaValue = typedArray.getString(R.styleable.MonthKeyView_alphaLabel);
+        alphaTVColor = typedArray.getInt(R.styleable.MonthKeyView_alphaTextColor, Color.BLACK);
+        alphaTVSize = typedArray.getDimension(R.styleable.MonthKeyView_alphaTextSize, convertPixelsToDp(16, context));
+        alphaTVFont = typedArray.getString(R.styleable.MonthKeyView_alphaTextViewFont);
     }
 
     private void initUtils() {
@@ -82,14 +80,14 @@ public class MonthKeyboardView extends FrameLayout {
             addView(numericMonthTextView, 0, numericMonthTextViewFrameLayoutParams);
             numericMonthTextView.setTypeface(getTypeface(numTVFont));
             numericMonthTextView.setText(numValue);
-            numericMonthTextView.setTextSize(44);
+            numericMonthTextView.setTextSize(convertPixelsToDp(44, context));
             numericMonthTextView.setTextColor(numTVColor);
         } else if (numValue == null) {
             alphaMonthTextViewFrameLayoutParams.gravity = Gravity.CENTER;
             addView(alphaMonthTextView, 0, alphaMonthTextViewFrameLayoutParams);
             alphaMonthTextView.setTypeface(getTypeface(alphaTVFont));
             alphaMonthTextView.setText(alphaValue);
-            alphaMonthTextView.setTextSize(26);
+            alphaMonthTextView.setTextSize(convertPixelsToDp(26, context));
             alphaMonthTextView.setTextColor(alphaTVColor);
         } else {
             numericMonthTextViewFrameLayoutParams.gravity = Gravity.CENTER;
@@ -98,13 +96,15 @@ public class MonthKeyboardView extends FrameLayout {
             addView(alphaMonthTextView, 1, alphaMonthTextViewFrameLayoutParams);
             numericMonthTextView.setTypeface(getTypeface(numTVFont));
             numericMonthTextView.setText(numValue);
-            numericMonthTextView.setTextSize(numTVSize);
+            numericMonthTextView.setTextSize(convertPixelsToDp(numTVSize, context));
             numericMonthTextView.setTextColor(numTVColor);
             alphaMonthTextView.setTypeface(getTypeface(alphaTVFont));
             alphaMonthTextView.setText(alphaValue);
             alphaMonthTextView.setTextColor(alphaTVColor);
-            alphaMonthTextView.setTextSize(alphaTVSize);
+            alphaMonthTextView.setTextSize(convertPixelsToDp(alphaTVSize, context));
         }
+
+
     }
 
     private Typeface getTypeface(String fontName) {
@@ -134,7 +134,7 @@ public class MonthKeyboardView extends FrameLayout {
         this.numValue = numValue;
         numericMonthTextView.setTypeface(getTypeface(numTVFont));
         numericMonthTextView.setText(numValue);
-        numericMonthTextView.setTextSize(44);
+        numericMonthTextView.setTextSize(convertPixelsToDp(44, context));
         numericMonthTextView.setTextColor(Color.BLACK);
         invalidate();
         requestLayout();
@@ -148,10 +148,40 @@ public class MonthKeyboardView extends FrameLayout {
         this.alphaValue = alphaValue;
         alphaMonthTextView.setText(this.numValue);
         alphaMonthTextView.setTextColor(Color.BLACK);
-        alphaMonthTextView.setTextSize(24);
+        alphaMonthTextView.setTextSize(convertPixelsToDp(24, context));
         alphaMonthTextView.setTypeface(getTypeface(alphaTVFont));
         invalidate();
         requestLayout();
     }
+
+
+    /**
+     * This method converts dp unit to equivalent pixels, depending on device density.
+     *
+     * @param dp      A value in dp (density independent pixels) unit. Which we need to convert into pixels
+     * @param context Context to get resources and device specific display metrics
+     * @return A float value to represent px equivalent to dp depending on device density
+     */
+    public static float convertDpToPixel(float dp, Context context) {
+        Resources resources = context.getResources();
+        DisplayMetrics metrics = resources.getDisplayMetrics();
+        float px = dp * ((float) metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT);
+        return px;
+    }
+
+    /**
+     * This method converts device specific pixels to density independent pixels.
+     *
+     * @param px      A value in px (pixels) unit. Which we need to convert into db
+     * @param context Context to get resources and device specific display metrics
+     * @return A float value to represent dp equivalent to px value
+     */
+    public static float convertPixelsToDp(float px, Context context) {
+        Resources resources = context.getResources();
+        DisplayMetrics metrics = resources.getDisplayMetrics();
+        float dp = px / ((float) metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT);
+        return dp;
+    }
+
 
 }

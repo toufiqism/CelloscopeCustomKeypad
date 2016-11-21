@@ -43,7 +43,8 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <android.csb.net.mylibrary.CelloscopeKeypadView
+            <com.csb.net.celloscopeKeypadLibrary.CelloscopeKeypadView
+                android:id="@+id/celloscopeKeyView_0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:alphaValue="@array/alphaValueMonth"

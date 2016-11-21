@@ -3,11 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CelloscopeCustomKeypad.iml" filepath="$PROJECT_DIR$/CelloscopeCustomKeypad.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CelloscopeKeypadLibrary/CelloscopeKeypadLibrary.iml" filepath="$PROJECT_DIR$/CelloscopeKeypadLibrary/CelloscopeKeypadLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/SwippedUI.iml" filepath="$PROJECT_DIR$/SwippedUI.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mylibrary/mylibrary.iml" filepath="$PROJECT_DIR$/mylibrary/mylibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mylibrary/mylibrary.iml" filepath="$PROJECT_DIR$/mylibrary/mylibrary.iml" />
     </modules>
   </component>
 </project>

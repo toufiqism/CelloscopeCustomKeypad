@@ -1,13 +1,12 @@
-package android.csb.net.mylibrary;
+package com.csb.net.celloscopeKeypadLibrary;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.Color;
-import android.support.annotation.ArrayRes;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.Gravity;
+import android.view.View;
 import android.widget.LinearLayout;
+
 
 import static android.content.ContentValues.TAG;
 
@@ -15,7 +14,7 @@ import static android.content.ContentValues.TAG;
  * Created by Tofiq Akbar on 11/16/16.
  */
 
-public class CelloscopeKeypadView extends LinearLayout {
+public class CelloscopeKeypadView extends LinearLayout implements View.OnClickListener {
 
     TypedArray typedArray;
     // CelloscopeKeypadView celloscopeKeypadView;
@@ -27,6 +26,8 @@ public class CelloscopeKeypadView extends LinearLayout {
     private int row, column;
     private CharSequence[] numValuesArray;
     private CharSequence[] alphaValuesArray;
+
+    private OnMonthKeyClickListener onMonthKeyClickListener;
 
     protected CelloscopeKeypadView(Context context) {
         super(context);
@@ -72,22 +73,13 @@ public class CelloscopeKeypadView extends LinearLayout {
                 int viewCounter = 0;
                 while (j < column + temp) {
                     Log.d(TAG, "newInstance: " + j + "=" + i);
-                    MonthKeyboardView monthKeyboardView = new MonthKeyboardView(context);
+                    MonthKeyView monthKeyboardView = new MonthKeyView(context);
                     monthKeyboardView.setNumValue((String) numValue[j]);
                     monthKeyboardView.setAlphaValue((String) alphaValue[j]);
+                    monthKeyboardView.setOnClickListener(this);
                     linearRow.addView(monthKeyboardView, viewCounter, celloscopeKeyViewLayoutParams);
-
                     viewCounter++;
                     j++;
-                    switch (j % 2) {
-                        case 0:
-                            monthKeyboardView.setBackgroundColor(Color.GREEN);
-                            break;
-                        case 1:
-                            monthKeyboardView.setBackgroundColor(Color.WHITE);
-                            break;
-                        default:
-                    }
                 }
                 Log.d(TAG, "newInstance: linearRow.getChildCount() " + linearRow.getChildCount());
                 addView(linearRow, i / row, celloscopeKeypadLayoutParams);
@@ -99,6 +91,27 @@ public class CelloscopeKeypadView extends LinearLayout {
         Log.d(TAG, "newInstance: getChildCount() " + getChildCount());
 
     }
+
+    public MonthKeyView getItemAt(int index) {
+        return null;
+    }
+
+    public void setOnMonthKeyClickListener(OnMonthKeyClickListener onMonthKeyClickListener) {
+        this.onMonthKeyClickListener = onMonthKeyClickListener;
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (onMonthKeyClickListener != null) {
+            MonthKeyView monthKeyView = (MonthKeyView) view;
+            onMonthKeyClickListener.onMonthKeyClicked(monthKeyView, monthKeyView.getNumValue());
+        }
+    }
+
+    public interface OnMonthKeyClickListener {
+        void onMonthKeyClicked(MonthKeyView monthKeyView, String numValue);
+    }
+
 
 
 }

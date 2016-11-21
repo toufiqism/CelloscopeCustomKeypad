@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="MonthKeyboardView">
+    <declare-styleable name="MonthKeyView">
         <attr name="numericLabel" format="string" />
         <attr name="numericTextSize" format="dimension" />
         <attr name="numericTextColor" format="reference|color" />
