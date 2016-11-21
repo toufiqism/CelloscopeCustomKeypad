@@ -2,9 +2,12 @@ package com.csb.net.celloscopeKeypadLibrary;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.support.annotation.IntRange;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 
@@ -19,13 +22,15 @@ public class CelloscopeKeypadView extends LinearLayout implements View.OnClickLi
     TypedArray typedArray;
     // CelloscopeKeypadView celloscopeKeypadView;
     LinearLayout.LayoutParams celloscopeKeypadLayoutParams
-            = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-    LinearLayout.LayoutParams celloscopeKeyViewLayoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+            = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, 0, 1f);
+    LinearLayout.LayoutParams celloscopeKeyViewLayoutParams = new LinearLayout.LayoutParams(0, LayoutParams.MATCH_PARENT, 1f);
 
     Context context;
     private int row, column;
+    private int setMonthKeyBorder;
     private CharSequence[] numValuesArray;
     private CharSequence[] alphaValuesArray;
+    private boolean isActive;
 
     private OnMonthKeyClickListener onMonthKeyClickListener;
 
@@ -53,13 +58,16 @@ public class CelloscopeKeypadView extends LinearLayout implements View.OnClickLi
         typedArray = this.context.getTheme().obtainStyledAttributes(attrs, R.styleable.CelloscopeKeypadView, 0, 0);
         this.row = typedArray.getInt(R.styleable.CelloscopeKeypadView_row, 0);
         this.column = typedArray.getInt(R.styleable.CelloscopeKeypadView_column, 0);
+        this.setMonthKeyBorder = typedArray.getResourceId(R.styleable.CelloscopeKeypadView_setMonthKeyBorder, 0);
         this.numValuesArray = typedArray.getTextArray(R.styleable.CelloscopeKeypadView_numValue);
         this.alphaValuesArray = typedArray.getTextArray(R.styleable.CelloscopeKeypadView_alphaValue);
+        this.isActive = typedArray.getBoolean(R.styleable.CelloscopeKeypadView_isActive, false);
         newInstance(row, column, numValuesArray, alphaValuesArray);
     }
 
     private void initUtils() {
         setOrientation(LinearLayout.VERTICAL);
+        this.setWeightSum(row);
     }
 
 
@@ -72,11 +80,13 @@ public class CelloscopeKeypadView extends LinearLayout implements View.OnClickLi
                 int temp = j;
                 int viewCounter = 0;
                 while (j < column + temp) {
-                    Log.d(TAG, "newInstance: " + j + "=" + i);
+                    Log.d(TAG, "newInstance:" + j + "=" + i);
                     MonthKeyView monthKeyboardView = new MonthKeyView(context);
                     monthKeyboardView.setNumValue((String) numValue[j]);
                     monthKeyboardView.setAlphaValue((String) alphaValue[j]);
                     monthKeyboardView.setOnClickListener(this);
+                    monthKeyboardView.setBackgroundResource(setMonthKeyBorder);
+                    linearRow.setWeightSum(column);
                     linearRow.addView(monthKeyboardView, viewCounter, celloscopeKeyViewLayoutParams);
                     viewCounter++;
                     j++;
@@ -92,8 +102,18 @@ public class CelloscopeKeypadView extends LinearLayout implements View.OnClickLi
 
     }
 
-    public MonthKeyView getItemAt(int index) {
-        return null;
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+
+    public MonthKeyView getItemAt(int row, int column) {
+        LinearLayout childAt = (LinearLayout) this.getChildAt(row);
+        return (MonthKeyView) childAt.getChildAt(column);
+
     }
 
     public void setOnMonthKeyClickListener(OnMonthKeyClickListener onMonthKeyClickListener) {
@@ -108,10 +128,17 @@ public class CelloscopeKeypadView extends LinearLayout implements View.OnClickLi
         }
     }
 
+    public int getSetMonthKeyBorder() {
+        return setMonthKeyBorder;
+    }
+
+    public void setSetMonthKeyBorder(int setMonthKeyBorder) {
+        this.setMonthKeyBorder = setMonthKeyBorder;
+    }
+
     public interface OnMonthKeyClickListener {
         void onMonthKeyClicked(MonthKeyView monthKeyView, String numValue);
     }
-
 
 
 }

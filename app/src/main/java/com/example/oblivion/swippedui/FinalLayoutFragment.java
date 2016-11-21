@@ -61,19 +61,10 @@ public class FinalLayoutFragment extends Fragment {
         rootView = inflater.inflate(R.layout.activity_final_layout, container, false);
         init(rootView);
         regi();
-//        dayKeypadController = new DayKeypadController(mCon, rootView);
-
         return rootView;
     }
 
     private void regi() {
-       /* l1.setOnKeyClickListeners(new MonthKeyView.OnKeyClickListener() {
-            @Override
-            public void onKeyClicked(MonthKeyView v, String value) {
-                isMonthSelected("January");
-            }
-        });*/
-
 
         Date_L0_1_3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -314,66 +305,66 @@ public class FinalLayoutFragment extends Fragment {
 
     private void isMonthSelected(String value) {
 
-        L0_1_1.setBackground(getResources().getDrawable(R.drawable.keypad_border_upper_left_month));
-        L0_1_2.setBackground(getResources().getDrawable(R.drawable.keypad_border_upper_left_month));
-        L0_1_3.setBackground(getResources().getDrawable(R.drawable.keypad_border_up_left_right_month));
-        L0_2_1.setBackground(getResources().getDrawable(R.drawable.keypad_border_upper_left_month));
-        L0_2_2.setBackground(getResources().getDrawable(R.drawable.keypad_border_upper_left_month));
-        L0_2_3.setBackground(getResources().getDrawable(R.drawable.keypad_border_up_left_right_month));
-        L0_3_1.setBackground(getResources().getDrawable(R.drawable.keypad_border_upper_left_month));
-        L0_3_2.setBackground(getResources().getDrawable(R.drawable.keypad_border_upper_left_month));
-        L0_3_3.setBackground(getResources().getDrawable(R.drawable.keypad_border_up_left_right_month));
-        L0_4_1.setBackground(getResources().getDrawable(R.drawable.keypad_border_up_left_bottom_month));
-        L0_4_2.setBackground(getResources().getDrawable(R.drawable.keypad_border_up_left_bottom_month));
-        L0_4_3.setBackground(getResources().getDrawable(R.drawable.keypad_border_up_left_bottom_right_month));
+        l1.setBackground(getResources().getDrawable(R.drawable.keypad_border_upper_left_month));
+        l2.setBackground(getResources().getDrawable(R.drawable.keypad_border_upper_left_month));
+        l3.setBackground(getResources().getDrawable(R.drawable.keypad_border_up_left_right_month));
+        l4.setBackground(getResources().getDrawable(R.drawable.keypad_border_upper_left_month));
+        l5.setBackground(getResources().getDrawable(R.drawable.keypad_border_upper_left_month));
+        l6.setBackground(getResources().getDrawable(R.drawable.keypad_border_up_left_right_month));
+        l7.setBackground(getResources().getDrawable(R.drawable.keypad_border_upper_left_month));
+        l8.setBackground(getResources().getDrawable(R.drawable.keypad_border_upper_left_month));
+        l9.setBackground(getResources().getDrawable(R.drawable.keypad_border_up_left_right_month));
+        l10.setBackground(getResources().getDrawable(R.drawable.keypad_border_up_left_bottom_month));
+        l11.setBackground(getResources().getDrawable(R.drawable.keypad_border_up_left_bottom_month));
+        l12.setBackground(getResources().getDrawable(R.drawable.keypad_border_up_left_bottom_right_month));
 
         if (value.compareToIgnoreCase("January") == 0) {
-            L0_1_1.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
+            l1.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
             txtMonth_Input.setText(getResources().getString(R.string.bangla_01));
             txtYear_Input.performClick();
 
         } else if (value.compareToIgnoreCase("February") == 0) {
-            L0_1_2.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
+            l2.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
             txtMonth_Input.setText(getResources().getString(R.string.bangla_02));
             txtYear_Input.performClick();
         } else if (value.compareToIgnoreCase("March") == 0) {
-            L0_1_3.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
+            l3.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
             txtMonth_Input.setText(getResources().getString(R.string.bangla_03));
             txtYear_Input.performClick();
         } else if (value.compareToIgnoreCase("April") == 0) {
-            L0_2_1.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
+            l4.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
             txtMonth_Input.setText(getResources().getString(R.string.bangla_04));
             txtYear_Input.performClick();
         } else if (value.compareToIgnoreCase("May") == 0) {
-            L0_2_2.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
+            l5.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
             txtMonth_Input.setText(getResources().getString(R.string.bangla_05));
             txtYear_Input.performClick();
         } else if (value.compareToIgnoreCase("June") == 0) {
-            L0_2_3.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
+            l6.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
             txtMonth_Input.setText(getResources().getString(R.string.bangla_06));
             txtYear_Input.performClick();
         } else if (value.compareToIgnoreCase("July") == 0) {
-            L0_3_1.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
+            l7.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
             txtMonth_Input.setText(getResources().getString(R.string.bangla_07));
             txtYear_Input.performClick();
         } else if (value.compareToIgnoreCase("August") == 0) {
-            L0_3_2.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
+            l8.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
             txtMonth_Input.setText(getResources().getString(R.string.bangla_08));
             txtYear_Input.performClick();
         } else if (value.compareToIgnoreCase("September") == 0) {
-            L0_3_3.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
+            l9.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
             txtMonth_Input.setText(getResources().getString(R.string.bangla_09));
             txtYear_Input.performClick();
         } else if (value.compareToIgnoreCase("October") == 0) {
-            L0_4_1.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
+            l10.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
             txtMonth_Input.setText(getResources().getString(R.string.bangla_10));
             txtYear_Input.performClick();
         } else if (value.compareToIgnoreCase("November") == 0) {
-            L0_4_2.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
+            l11.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
             txtMonth_Input.setText(getResources().getString(R.string.bangla_11));
             txtYear_Input.performClick();
         } else if (value.compareToIgnoreCase("December") == 0) {
-            L0_4_3.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
+            l12.setBackground(getResources().getDrawable(R.drawable.keypad_month_border_selected));
             txtMonth_Input.setText(getResources().getString(R.string.bangla_12));
             txtYear_Input.performClick();
         }

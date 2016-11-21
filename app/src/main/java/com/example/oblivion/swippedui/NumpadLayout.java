@@ -7,8 +7,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.TextView;
 
 import com.csb.net.celloscopeKeypadLibrary.CelloscopeKeypadView;
 import com.csb.net.celloscopeKeypadLibrary.MonthKeyView;
@@ -44,8 +42,6 @@ public class NumpadLayout extends Fragment implements CelloscopeKeypadView.OnMon
         celloscopeKeyView_0 = (CelloscopeKeypadView) rootView.findViewById(R.id.celloscopeKeyView_0);
         celloscopeKeyView_0.setOnMonthKeyClickListener(this);
         Bundle args = getArguments();
-
-
         return rootView;
     }
 
@@ -60,8 +56,11 @@ public class NumpadLayout extends Fragment implements CelloscopeKeypadView.OnMon
         }
     }
 
+
     @Override
     public void onMonthKeyClicked(MonthKeyView monthKeyView, String numValue) {
         Log.d(TAG, "onMonthKeyClicked: " + numValue);
+        Log.d(TAG, "Value" + celloscopeKeyView_0.getItemAt(0, 2 ).getNumValue() + celloscopeKeyView_0.getItemAt(0, 2).getAlphaValue());
+
     }
 }

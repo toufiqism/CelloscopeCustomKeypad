@@ -671,4 +671,39 @@
         <item>১২</item>
 
     </string-array>
+
+
+    <string-array name="numValueNumpad">
+        <item>০১</item>
+        <item>০২</item>
+        <item>০৩</item>
+        <item>০৪</item>
+        <item>০৫</item>
+        <item>০৬</item>
+        <item>০৭</item>
+        <item>০৮</item>
+        <item>০৯</item>
+        <item>১০</item>
+        <item>১১</item>
+        <item>১২</item>
+        <item>১৩</item>
+        <item>১৪</item>
+        <item>১৫</item>
+        <item>১৬</item>
+        <item>১৭</item>
+        <item>১৮</item>
+        <item>১৯</item>
+        <item>২০</item>
+        <item>২১</item>
+        <item>২২</item>
+        <item>২৩</item>
+        <item>২৪</item>
+        <item>২৫</item>
+        <item>২৬</item>
+        <item>২৭</item>
+        <item>২৮</item>
+        <item>২৯</item>
+        <item>৩০</item>
+        <item>৩১</item>
+    </string-array>
 </resources>

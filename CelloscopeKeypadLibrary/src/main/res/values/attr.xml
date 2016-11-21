@@ -14,6 +14,8 @@
 
     </declare-styleable>
     <declare-styleable name="CelloscopeKeypadView">
+        <attr name="setMonthKeyBorder" format="reference" />
+        <attr name="isActive" format="boolean" />
         <attr name="row" format="integer" />
         <attr name="column" format="integer" />
         <attr name="alphaValue" format="reference" />
